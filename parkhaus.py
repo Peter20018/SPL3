@@ -21,6 +21,8 @@ for i in range(1,haltestelle+1):
 
     a = a + person
     a = a - draußen
+
+    print("Es sind zurzeit", a ," Personen im Bus")
     if(a > 60):
         print("Hallo steigen sie bitte aus, die maximale Anzahl an Passagieren ist überschritten!!")
         u = a - 60
