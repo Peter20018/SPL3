@@ -10,7 +10,7 @@ haltestellen = input("Wie viele Haltestellen gibt es? ")
 haltestelle = int(haltestellen)
 
 for i in range(1,haltestelle+1):
-
+    
     print("Sie sind an der Haltestelle " , i , ". Wie viele Personen steigen ein?")
     einsteiger = input()
     person = int(einsteiger)
@@ -21,5 +21,10 @@ for i in range(1,haltestelle+1):
 
     a = a + person
     a = a - draußen
-
+    if(a > 60):
+        print("Hallo steigen sie bitte aus, die maximale Anzahl an Passagieren ist überschritten!!")
+        u = a - 60
+        print("Es dürfen ", u ," Personen nicht mitfahren.")
+        a = 60
+    
 print("Die Anzahl der eingestiegenen Personen beträgt " , a)
