@@ -12,7 +12,14 @@ haltestelle = int(haltestellen)
 for i in range(1,haltestelle+1):
 
     print("Sie sind an der Haltestelle " , i , ". Wie viele Personen steigen ein?")
-    personen = input()
-    person = int(personen)
+    einsteiger = input()
+    person = int(einsteiger)
+
+    print("Wie viele Personen steigen aus?")
+    aussteiger = input()
+    draußen = int(aussteiger)
+
     a = a + person
+    a = a - draußen
+
 print("Die Anzahl der eingestiegenen Personen beträgt " , a)
