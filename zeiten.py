@@ -1,5 +1,7 @@
 # zeiten.py 
 
+import sys
+
 def zeitinSekunden(h, m, s):
     gesamt = 0
     gesamt += h*3600
@@ -7,9 +9,10 @@ def zeitinSekunden(h, m, s):
     gesamt += s
     return gesamt
 
+p = sys.argv
 
-beginnZeit = input("Beginnzeit: ")
-endeZeit = input("Endzeit: ")
+beginnZeit = p[1]
+endeZeit = p[2]
 
 beginn = beginnZeit.split(":")
 print(beginn)
@@ -26,6 +29,7 @@ s = int(beginn[2])
 a = int(ende[0])
 b = int(ende[1])
 c = int(ende[2])
+
 print("Stunden: " , h)
 print("Minuten: ", m)
 print("Sekunden: ", s)
